@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>WebCat</title>
+  </head>
+  <style>
+  img#伊 {
+    position: absolute;
+    top:230px;
+    left:80px;
+    }
+  </style>
+  <body>	
+	<img id="伊" src="伊吹1.png" width="230" height="250">
+  </body>
+  <script>
+  var 伊吹 = document.getElementById("伊")
+  document.addEventListener("touchstart",(e) => {
+    伊吹.src = "伊吹2.png"
+  })
+  document.addEventListener("touchend",(e) => {
+    伊吹.src = "伊吹1.png"
+  })
+  </script>
+</html>
