@@ -10,9 +10,17 @@
     top:230px;
     left:80px;
     }
+  button {
+    
+    }
   </style>
   <body>	
 	<img id="伊" src="伊吹1.png" width="230" height="250">
+    宽度：<input id="宽度" type="text"><br>
+    高度：<input id="高度" type="text"><br>
+    left：<input id="left" type="text"><br>
+    top：<input id="top" type="text"><br>
+      <button onclick="k()">确定</button>
   </body>
   <script>
   var 伊吹 = document.getElementById("伊")
@@ -22,5 +30,21 @@
   document.addEventListener("touchend",(e) => {
     伊吹.src = "伊吹1.png"
   })
+  document.addEventListener("mousedown",(e) => {
+    伊吹.src = "伊吹2.png"
+  })
+  document.addEventListener("mouseup",(e) => {
+    伊吹.src = "伊吹1.png"
+  })
+  function k(){
+  var 宽度 = document.getElementById("宽度");
+  var 高度 = document.getElementById("高度");
+  var left = document.getElementById("left");
+  var top = document.getElementById("top");
+  伊吹.width = 宽度.value;
+  伊吹.height = 高度.value;
+  伊吹.style.top = top.value;
+  伊吹.style.left = left.value;
+  }
   </script>
 </html>
